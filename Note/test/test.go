@@ -5,5 +5,5 @@ import "fmt"
 // todo import "fmt"
 
 func main() {
-	fmt.Println("Hello ")
+	fmt.Println("Hello goland")
 }

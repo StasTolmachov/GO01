@@ -12,3 +12,5 @@ func simplefor(arr []int) {
 		fmt.Println(arr[i])
 	}
 }
+
+//todo
