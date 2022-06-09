@@ -1,7 +1,9 @@
 package main
 
+import "fmt"
+
 // todo import "fmt"
 
 func main() {
-	fmt.Println()
+	fmt.Println("Hello")
 }
