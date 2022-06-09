@@ -5,5 +5,5 @@ import "fmt"
 // todo import "fmt"
 
 func main() {
-	fmt.Println("Hello gitlens")
+	fmt.Println("Hello test")
 }
