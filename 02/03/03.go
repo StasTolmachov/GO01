@@ -4,11 +4,19 @@ import "fmt"
 
 func main() {
 
-	var a string
+	var a int
+	var s int
+	var d int
+	var e int
 
 	fmt.Print("Введите трехзначное число: ")
 	fmt.Scanln(&a)
 
-	fmt.Println("Сотни: ", string(a[0]), "\nДесятки: ", string(a[1]), "\nЕдиницы: ", string(a[2]))
+	s = a / 100
+
+	d = (a - (s * 100)) / 10
+	e = a - (s * 100) - (d * 10)
+
+	fmt.Println("Сотни: ", s, "Десятки: ", d, "Единицы: ", e)
 
 }
