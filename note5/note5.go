@@ -26,7 +26,7 @@ func main() {
 }
 
 */
-
+/*
 package main
 
 import "fmt"
@@ -55,4 +55,77 @@ func main() {
 		panic(err)
 	}
 	fmt.Printf("user: %+v\n", user)
+}
+*/
+/*
+package main
+
+import "fmt"
+
+func main() {
+
+		a := 33
+		fmt.Println(a)
+		fmt.Println(&a)
+
+		b := &a
+		fmt.Println(b)
+		fmt.Println(*b)
+		fmt.Printf("%T\n", b)
+
+	canada := "Canada"
+
+	var home *string
+
+	home = &canada
+
+	fmt.Println(home)
+	fmt.Println(*home)
+}
+*/
+/*
+package main
+
+import "fmt"
+func main() {
+type person struct {
+	name, superpower string
+	age int
+}
+
+katy := &person{
+	name: "katerina",
+	age: 30,
+}
+
+katy.superpower = "boom"
+fmt.Println(katy)
+}
+*/
+
+package main
+
+import "fmt"
+
+type person struct {
+	name, superpower string
+	age              int
+}
+
+func birthday(p *person) {
+	p.age++
+}
+
+func main() {
+
+	rebecca := person{
+		name:       "rebecca",
+		superpower: "imagination",
+		age:        14,
+	}
+
+	birthday(&rebecca)
+
+
+	fmt.Printf("%+v\n", rebecca)
 }
