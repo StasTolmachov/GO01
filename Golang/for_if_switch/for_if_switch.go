@@ -1,64 +1,5 @@
-// package main
-
-// import (
-// 	"fmt"
-// 	"strings"
-// )
-
-// func main() {
-// 	var comand = "красное черное"
-// 	var exit = strings.Contains(comand, "красное")
-// 	fmt.Println(exit)
-// }
-
-// package main
-
-// import (
-// 	"fmt"
-// )
-
-// func main() {
-// 	fmt.Println("На дворе 2100 год. Он високосный?")
-
-// 	var year = 2104
-// 	var leap = year%400 == 0 || (year%4 == 0 && year%100 != 0)
-
-// 	if leap {
-// 		fmt.Println("Этот год високосный!")
-// 	} else {
-// 		fmt.Println("К сожалению, нет. Этот год не високосный.")
-// 	}
-
-// 	fmt.Println(leap)
-// }
-
-// package main
-
-// import (
-// 	"fmt"
-// )
-
-// func main() {
-// 	var a = 6
-
-// 	var b = a == 5 || a%3 == 0
-
-// 	fmt.Println(!b)
-
-// }
-
-// package main
-
-// import "fmt"
-
-// func main() {
-// 	var a = 1
-// 	for a <= 10 {
-// 		fmt.Println(a)
-// 		a++
-// 	}
-// }
-
+/*
+// высокосный год
 package main
 
 import (
@@ -67,14 +8,76 @@ import (
 )
 
 func main() {
-	var numUser int
-	var numComp int
+	var year int
+	var month int
+	var dayToday int
+	var year4 bool
 
-	numUser = 5
+	year = 2000 + rand.Intn(20)
 
-	for numUser != numComp {
-		numComp = rand.Intn(10) + 1
-		fmt.Println(numComp)
+	month = rand.Intn(12) + 1
+
+	for i := 0; i <= 10; i++ {
+
+		switch month {
+		case 2:
+			if year4 {
+				dayToday = rand.Intn(29) + 1
+			} else {
+				dayToday = rand.Intn(28) + 1
+			}
+
+		case 4, 6, 9, 11:
+			dayToday = rand.Intn(30) + 1
+
+		default:
+			dayToday = rand.Intn(31) + 1
+
+		}
+		fmt.Println(year, month, dayToday)
 	}
 
+}
+*/
+
+package main
+
+import (
+	"fmt"
+	"math/rand"
+)
+
+const secondsPerDay = 86400
+
+func main() {
+	distance := 62100000
+	company := ""
+	trip := ""
+
+	fmt.Println("Spaceline        Days Trip type  Price")
+	fmt.Println("======================================")
+
+	for count := 0; count < 10; count++ {
+		switch rand.Intn(3) {
+		case 0:
+			company = "Space Adventures"
+		case 1:
+			company = "SpaceX"
+		case 2:
+			company = "Virgin Galactic"
+		}
+
+		speed := rand.Intn(15) + 16                  // 16-30 km/s
+		duration := distance / speed / secondsPerDay // days
+		price := 20.0 + speed                        // millions
+
+		if rand.Intn(2) == 1 {
+			trip = "Round-trip"
+			price = price * 2
+		} else {
+			trip = "One-way"
+		}
+
+		fmt.Printf("%-16v %4v %-10v $%4v\n", company, duration, trip, price)
+	}
 }
