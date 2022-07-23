@@ -269,17 +269,20 @@ package main
 import "fmt"
 
 func main() {
-	planets := map[string]int{
-		"first":  11,
-		"second": 22,
-		"three": 33,
+	type coordinate struct {
+		width  float64
+		lendth float64
 	}
-	fmt.Println(planets)
 
-	moon := planets["first"]
-	fmt.Println(moon)
+	var space1 coordinate
+	space1.width = 66.6
+	space1.lendth = 99.89
 
-	for _, p := range planets {
-		
-	}
+	fmt.Println(space1)
+
+	var space2 coordinate
+	space2.width = 4
+	space2.lendth = 5
+
+	fmt.Println(space2)
 }
