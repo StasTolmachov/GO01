@@ -81,6 +81,7 @@ package main
 import (
 	"flag"
 	"fmt"
+	"os"
 )
 
 type baseData struct {
@@ -100,7 +101,23 @@ func main() {
 	flag.Parse()
 
 	flagFunc(connect.userName, connect.pass, connect.host, connect.port)
+
+	// переменные окружения
+
+	// module := os.Getenv("PATH")
+	// fmt.Println(module)
+
+	module, ok := os.LookupEnv("PATH")
+	fmt.Println(module, ok)
+
+	os.Clearenv()
+
+	fmt.Println(os.Environ())
+
+	os.Setenv("newEnv", "newEnvValua")
+	fmt.Println(os.Environ())
 }
+
 func flagFunc(userName, pass, host string, port int) {
 	fmt.Println(userName, pass, host, port)
 }
