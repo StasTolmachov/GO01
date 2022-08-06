@@ -3,6 +3,7 @@ package MyConfigPkg
 import (
 	"flag"
 	"fmt"
+	"net/url"
 )
 
 func MyConfigFunc() {
@@ -29,5 +30,19 @@ func MyConfigFunc() {
 
 	flag.Parse()
 
+	_, err := url.Parse(connect.db_url)
+	if err != nil {
+		panic(err)
+	}
+	_, err = url.Parse(connect.jaeger_url)
+	if err != nil {
+		panic(err)
+	}
+	_, err = url.Parse(connect.sentry_url)
+	if err != nil {
+		panic(err)
+	}
+
 	fmt.Println(connect.port, connect.db_url, connect.jaeger_url, connect.sentry_url, connect.kafka_broker, connect.some_app_id, connect.some_app_key)
+
 }
