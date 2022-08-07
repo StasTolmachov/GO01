@@ -40,9 +40,9 @@ func main() {
 	}
 	fmt.Println(cntct)
 
-	cntct.FirstName = "Stasvv"
+	cntct.FirstName = "7777"
 
-	dataNew, err := os.OpenFile("contactNew.json", os.O_WRONLY|os.O_CREATE, 0777)
+	dataNew, err := os.OpenFile("contact.json", os.O_WRONLY|os.O_CREATE, 0777)
 	if err != nil {
 		panic(err)
 	}
