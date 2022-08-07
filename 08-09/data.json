@@ -1,1 +1,1 @@
-{}
+{"Port":25,"Db_url":"new","Jaeger_url":"http://jaeger:16686","Sentry_url":"http://sentry:9000","Kafka_broker":"kafka:9092","Some_app_id":"testid","Some_app_key":"testkey"}
