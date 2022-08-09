@@ -1,10 +1,10 @@
-package main
+package fibonachi
 
 import (
 	"fmt"
 )
 
-func main() {
+func Fibonachi() {
 
 	recursionMap := map[int]int{
 		0: 0,
@@ -31,7 +31,7 @@ func main() {
 
 		}
 
-		val = fib(int(key))
+		val = Fib(int(key))
 		fmt.Println("Значение Фибоначчи:", val)
 
 		recursionMap[key] = val
@@ -40,7 +40,7 @@ func main() {
 	}
 }
 
-func fib(n int) int {
+func Fib(n int) int {
 	if n == 0 {
 		return 0
 	}
@@ -48,6 +48,18 @@ func fib(n int) int {
 		return 1
 	}
 
-	return fib(n-1) + fib(n-2)
+	return Fib(n-1) + Fib(n-2)
 
+}
+
+func Fib2(n int) int {
+	var f1, f2 int
+	f2 = 1
+	var i int
+	for ; i < n-1; i++ {
+		sum := f1 + f2
+		f1 = f2
+		f2 = sum
+	}
+	return f2
 }
