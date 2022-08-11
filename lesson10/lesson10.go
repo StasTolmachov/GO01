@@ -2,21 +2,21 @@ package main
 
 import (
 	"GO01/lesson10/fibonachi"
-	"GO01/lesson10/sum"
+	"GO01/lesson10/sort"
 	"fmt"
 )
 
 func main() {
-	// file fibonachi
-	// fibonachi.Fibonachi()
+
 	res := fibonachi.Fib(15)
 	fmt.Println(res)
 
 	res2 := fibonachi.Fib2(15)
 	fmt.Println(res2)
 
-	// file sum
-	result := sum.Sum(4, 8)
-	fmt.Println(result)
+	arr := []int{99, 34, 2, 65, 44}
+	fmt.Println(arr)
+	sort.InsertionSort(arr)
+	fmt.Println(arr)
 
 }

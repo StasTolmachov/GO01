@@ -40,6 +40,7 @@ func Fibonachi() {
 	}
 }
 
+// Fib функция фибоначи с рекурсией
 func Fib(n int) int {
 	if n == 0 {
 		return 0
@@ -52,6 +53,7 @@ func Fib(n int) int {
 
 }
 
+// Fib2 функция фибоначи
 func Fib2(n int) int {
 	var f1, f2 int
 	f2 = 1
