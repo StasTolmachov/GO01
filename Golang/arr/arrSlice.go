@@ -2,10 +2,11 @@ package main
 
 import (
 	"fmt"
+	"strings"
 )
 
 func main() {
-	fmt.Println("work")
+
 	planets := [...]string{
 		"Меркурий",
 		"Венера",
@@ -22,4 +23,30 @@ func main() {
 
 	fmt.Println(planets, terrestrial, gasGiants, iceGiants)
 
+	fmt.Println("-----------")
+
+	slice := []string{
+		"Меркурий",
+		"Венера",
+		"Земля",
+		"Марс",
+		"Юпитер",
+		"Сатурн",
+		"Уран",
+		"Нептун",
+	}
+
+	fmt.Println(slice)
+
+	fmt.Println("-----------")
+
+	hyperspace(slice)
+	fmt.Println(strings.Join(slice, ""))
+
+}
+
+func hyperspace(words []string) {
+	for i := range words {
+		words[i] = strings.TrimSpace(words[i])
+	}
 }
