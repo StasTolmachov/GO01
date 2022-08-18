@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"sort"
 	"strings"
 )
 
@@ -42,6 +43,10 @@ func main() {
 
 	hyperspace(slice)
 	fmt.Println(strings.Join(slice, ""))
+	fmt.Println("-----------")
+
+	sort.StringSlice(slice).Sort()
+	fmt.Println(slice)
 
 }
 
@@ -50,3 +55,7 @@ func hyperspace(words []string) {
 		words[i] = strings.TrimSpace(words[i])
 	}
 }
+
+type StringSlice []string
+
+func (p StringSlice) Sort() {}
