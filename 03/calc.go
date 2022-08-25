@@ -18,6 +18,13 @@ func factorial(num float64) float64 {
 }
 
 func main() {
+	defer func() {
+
+		if v := recover(); v != nil {
+			fmt.Println("Функция OpenFile была восстановлена")
+
+		}
+	}()
 
 	fmt.Print("Enter first number A: ")
 	fmt.Scan(&a)

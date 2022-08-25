@@ -38,9 +38,9 @@ func main() {
 	var valutaIN string
 	var valutaOUT string
 	var result float64
-	fmt.Println("valuta in")
+	fmt.Println("valuta in: zl uah usd")
 	fmt.Scan(&valutaIN)
-	fmt.Println("valuta out")
+	fmt.Println("valuta out: zl uah usd")
 	fmt.Scan(&valutaOUT)
 
 	if valutaIN == "uah" && valutaOUT == "usd" {
