@@ -1,8 +1,8 @@
 package main
 
 import (
-	"GO01/lesson10/fibonachi"
-	"GO01/lesson10/sort"
+	"lesson10/fibonachi"
+	"lesson10/sort"
 	"fmt"
 )
 

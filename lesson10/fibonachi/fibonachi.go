@@ -3,7 +3,7 @@ package fibonachi
 import (
 	"fmt"
 )
-
+// Fibonachi main
 func Fibonachi() {
 
 	recursionMap := map[int]int{
