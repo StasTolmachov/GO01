@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <title>Homework</title>
 </head>
-
 <body>
-  <!--
+<!--
 Обязательное задание.
 
 Необходимо реализовать четыре функции, каждая функция должна принимать по два
@@ -30,36 +28,53 @@
 
 Необходимо для всех функций прописать комментарии jsdoc https://jsdoc.app/.
 -->
-  <script>
-    "use strict";
+<script>
+  "use strict";
 
-    const arg1 = +prompt('Введите первый аргумент')
-    const arg2 = +prompt('Введите второй аргумент')
+  /**
+   * Считает сумму переданных аргументов.
+   * @param {number} a - Первое число.
+   * @param {number} b - Второе число.
+   * @return {number} Сумма чисел.
+   */
+  function sum(a, b) {
+    return a + b;
+  }
 
+  /**
+   * Считает разницу переданных аргументов.
+   * @param {number} a - Первое число.
+   * @param {number} b - Второе число.
+   * @return {number} Разница чисел.
+   */
+  function difference(a, b) {
+    if (a > b) {
+      return a - b;
+    }
+    return b - a;
+    // Или можно просто:
+    // return Math.abs(a - b);
+  }
 
-    console.log(sum(arg1, arg2))
-    console.log(subtraction(arg1, arg2))
-    console.log(multiply(arg1, arg2))
-    console.log(division(arg1, arg2))
+  /**
+   * Считает произведение переданных аргументов.
+   * @param {number} a - Первое число.
+   * @param {number} b - Второе число.
+   * @return {number} Проиведение чисел.
+   */
+  function multiplication(a, b) {
+    return a * b;
+  }
 
-    function sum(arg1, arg2) {
-      return arg1 + arg2
-    }
-    function subtraction(arg1, arg2) {
-      if (arg1 > arg2) {
-        return arg1 - arg2
-      } else if (arg1 === arg2) {
-        return 0
-      }
-      return arg2 - arg1
-    }
-    function multiply(arg1, arg2) {
-      return arg1 * arg2
-    }
-    function division(arg1, arg2) {
-      return arg1 / arg2
-    }
-  </script>
+  /**
+   * Считает частное переданных аргументов.
+   * @param {number} a - Первое число.
+   * @param {number} b - Второе число.
+   * @return {number} Частное чисел.
+   */
+  function division(a, b) {
+    return a / b;
+  }
+</script>
 </body>
-
 </html>

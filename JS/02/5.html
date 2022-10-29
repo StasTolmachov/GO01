@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Homework</title>
 </head>
+
 <body>
-<!--
+  <!--
 Обязательное задание.
 
 Необходимо скопировать и вставить в данный скрипт все функции из 4 задания.
@@ -29,10 +31,62 @@ Infinity делать не нужно, однако, в случае если б
 
 Необходимо для всех функций прописать комментарии jsdoc https://jsdoc.app/.
 -->
-<script>
-  "use strict";
+  <script>
+    "use strict";
 
-  // Здесь пишем решение, данный комментарий необходимо стереть.
-</script>
+    const arg1 = +prompt('Введите первый аргумент')
+    const arg2 = +prompt('Введите второй аргумент')
+    const operation = prompt('Введите знак операции один из: "+", "-", "*", "/"')
+
+    console.log(mathOperation(arg1, arg2, operation))
+
+    /**
+     * Функция запускает функцию соответсвующую введенной операции.
+     */
+    function mathOperation(arg1, arg2, operation) {
+      switch (operation) {
+        case '+':
+          return sum(arg1, arg2)
+        case '-':
+          return subtraction(arg1, arg2)
+        case '*':
+          return multiply(arg1, arg2)
+        case '/':
+          return division(arg1, arg2)
+        default:
+          return NaN
+      }
+    }
+    /**
+     * Функция сложения двух аргументов.
+     */
+    function sum(arg1, arg2) {
+      return arg1 + arg2
+    }
+    /**
+   * Функция вычитания двух аргументов, от большего меньшее.
+   */
+    function subtraction(arg1, arg2) {
+      if (arg1 > arg2) {
+        return arg1 - arg2
+      } else if (arg1 === arg2) {
+        return 0
+      }
+      return arg2 - arg1
+    }
+    /**
+   * Функция умножения двух аргументов.
+   */
+    function multiply(arg1, arg2) {
+      return arg1 * arg2
+    }
+    /**
+   * Функция деления двух аргументов.
+   */
+    function division(arg1, arg2) {
+      return arg1 / arg2
+    }
+  </script>
 </body>
+
 </html>
