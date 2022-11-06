@@ -11,17 +11,15 @@
 <body>
     <script>
         "use strict";
-        // let basket
+
         let product = {
             id: "id",
             name: "name",
             price: "price",
         };
 
-        // console.log(product)
 
-
-        //перечень товаров
+        //перечень товаров 7597
         const book = {
             id: 1001,
             name: "book",
@@ -47,31 +45,19 @@
             name: "airPods",
             price: 7000,
         }
-        // карзина сайта с товарами
-        // let basket = {
-        //     book,
-        //     map,
-        //     apple,
-        //     table,
-        //     airPods,
-        // }
+
         let basket = [book, map, apple, table, airPods]
 
-
-
-        console.log(basket[2]["price"])
-
-
-
-
-
+        let sum = 0
+        countBasketPrice()
+        console.log("Сумма товаров: " + sum)
 
         /**
          * Функция считает стоимость товаров в корзине.
          */
         function countBasketPrice() {
-            if (i = 0; i <= basket.length; i++) {
-                
+            for (let i = 0; i < basket.length; i++) {
+                sum = sum + basket[i]["price"]
             }
         }
     </script>
