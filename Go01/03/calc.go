@@ -8,7 +8,6 @@ import (
 )
 
 var a, b, res float64
-var op string
 
 func factorial(num float64) float64 {
 	if num == 1 || num == 0 {
@@ -25,6 +24,8 @@ func main() {
 
 		}
 	}()
+
+	var op string
 
 	fmt.Print("Enter first number A: ")
 	fmt.Scan(&a)
