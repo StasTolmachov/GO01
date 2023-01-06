@@ -7,6 +7,10 @@ func main() {
 	var userNumber int
 	fmt.Println("Введите число от 1 до 30")
 	fmt.Scan(&userNumber)
+	if userNumber > 30 {
+		fmt.Println("Введите число от 1 до 30")
+		panic(userNumber)
+	}
 	var sliceNumber int
 	low := 0
 	mid := len(slice) / 2
